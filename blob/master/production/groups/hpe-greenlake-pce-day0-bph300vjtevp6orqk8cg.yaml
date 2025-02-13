@@ -17,6 +17,7 @@ vars:
 
   - anchor: &members
     - mo.abid@hpe.com
+    - tamina@hpe.com
   - anchor: &day0_partner_assignments
       All Resources@greenlake.service.system:
         - BMAAS Access Owner
