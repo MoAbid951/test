@@ -1,0 +1,51 @@
+
+    #
+    # This file defines the tenant/space/role assignments that one
+    # specific user group is expected to have on GLC production IAM.
+    #
+    # It makes use of YAML "anchor" syntax to avoid repetition
+    # where the assignments for this group on multiple tenants
+    # are the same.
+    #
+    # (c) Copyright 2022-2024 Hewlett Packard Enterprise Development LP
+    #
+    
+vars:
+  - anchor: &name hpe-greenlake-pce-day0-bph300vjtevp6orqk8cg
+  - anchor: &description >-
+    Day0 build partner for tenant bph300vjtevp6orqk8cg
+
+  - anchor: &members
+    - mo.abid@hpe.com
+  - anchor: &day0_partner_assignments
+      All Resources@greenlake.service.system:
+        - BMAAS Access Owner
+        - BMAAS Access Project Contributor
+        - IAM Owner
+        - Space Owner
+        - Private Cloud Widget Viewer
+        - Private Cloud Enterprise Location Viewer
+
+      All Resources@greenlake.service.user:
+        - BMAAS Access Owner
+        - BMAAS Access Project Contributor
+        - IAM Owner
+        - Space Owner
+        - Private Cloud Widget Viewer
+        - Private Cloud Enterprise Location Viewer
+
+      Default@greenlake.service.user:
+        - BMAAS Access Owner
+        - BMAAS Access Project Contributor
+        - IAM Owner
+        - IAM Viewer
+        - Space Owner
+        - Private Cloud Widget Viewer
+        - Private Cloud Enterprise Location Viewer
+
+canonical_assignments:
+  name: *name
+  description: *description
+  members: *members
+  tenant_assignments:
+    Danfoss: *day0_partner_assignments
