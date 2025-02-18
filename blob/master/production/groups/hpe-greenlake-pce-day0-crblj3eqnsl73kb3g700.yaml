@@ -16,9 +16,7 @@ vars:
     Day0 build partner for tenant crblj3eqnsl73kb3g700
 
   - anchor: &members
-    - mo.abid@hpe.com
-    - tamina@hpe.com
-    - jq@hpe.com
+    - shirley.akh.n@hpe.com
   - anchor: &day0_partner_assignments
       All Resources@greenlake.service.system:
         - BMAAS Access Owner
