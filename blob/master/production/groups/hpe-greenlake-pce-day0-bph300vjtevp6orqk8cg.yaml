@@ -11,7 +11,7 @@ vars:
   - anchor: &description >-
       Day0 build partner for tenant bph300vjtevp6orqk8cg
   - anchor: &members
-      - abid@hpe.com
+      - abd@hpe.com
   - anchor: &day0_partner_assignments
       All Resources@greenlake.service.system:
         - BMAAS Access Owner
